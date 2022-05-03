@@ -23,6 +23,7 @@
       "*": ["*", "modules/*"]
     }
   },
+  "typeRoots": ["./node_modules/@types", "./typings"],
   "includes": ["src/*"],
   "exclude": [
     "e2e/**/*.ts",

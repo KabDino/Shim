@@ -23,7 +23,7 @@ const App = (): ReactElement => {
           <View>
             <Text>Hi, you'r a great man!</Text>
           </View>
-          <Button onPress={() => console.warn('first')} title={'Button'} />
+          <Buttun onPress={() => console.warn('first')} title={'Button'} />
         </ScrollView>
       </SafeAreaView>
     </Provider>

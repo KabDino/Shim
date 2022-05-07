@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useCallback } from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -9,11 +9,16 @@ import {
   Button,
 } from 'react-native';
 import { Provider } from 'react-redux';
+
 import { store } from './src/store';
 
 const App = (): ReactElement => {
   console.warn(store.getState());
   const isDarkMode = useColorScheme() === 'dark';
+
+  const handlePress = useCallback(() => {
+    console.warn('first');
+  }, []);
 
   return (
     <Provider store={store}>
@@ -21,9 +26,9 @@ const App = (): ReactElement => {
         <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
         <ScrollView contentInsetAdjustmentBehavior="automatic">
           <View>
-            <Text>Hi, you'r a great man!</Text>
+            <Text>{"Hi, you'r a great man!"}</Text>
           </View>
-          <Buttun onPress={() => console.warn('first')} title={'Button'} />
+          <Button onPress={handlePress} title={'Button'} />
         </ScrollView>
       </SafeAreaView>
     </Provider>

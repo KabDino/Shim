@@ -9,7 +9,8 @@
     "test": "jest",
     "lint": "eslint .",
     "rs": "del node_modules && del package-lock.json && npm i && npm start -- --reset-cache",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "dependencies": {
     "react": "^17.0.2",

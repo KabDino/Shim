@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -11,8 +11,8 @@ import {
 import { Provider } from 'react-redux';
 import { store } from './src/store';
 
-const App = () => {
-  console.warn(store.getState())
+const App = (): ReactElement => {
+  console.warn(store.getState());
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
